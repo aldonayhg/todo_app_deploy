@@ -8,7 +8,10 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+     @Column(nullable = false)
     private String title;
+
+    @Column(columnDefinition = "TINYINT(1)")
     private boolean completed;
 
     // Getters y Setters
